@@ -1,16 +1,16 @@
 <div>
     <app-gitsearch-form (emitUser)="myName($event)"></app-gitsearch-form>
-    <!--<div *ngFor='let myUser of myUsers'>
-        <p>Name: {{myUser.name}}<br>GitHub name: {{myUser.login}}</p>
-        <img src="{{myUser.avatar_url}}" alt="">
+    <div *ngFor='let theUser of theUsers'>
+        <p>Name: {{theUser.name}}<br>GitHub name: {{theUser.login}}</p>
+        <img src="{{theUser.avatar_url}}" alt="">
     </div>
     <div class="card-columns">
-        <div *ngFor = 'let myRepo of myRepos'>
-            <div *ngFor = 'let myRep of myRepo'>
-                <h5>{{myRep.name}}</h5>
-                <p>{{myRep.description}}</p>
-                <a href="{{myRep.html_url}}"><p>View project on GitHub</p></a>
+       
+            <div *ngFor = 'let theRepo of theRepositories'>
+                <h5>{{theRepo.name}}</h5>
+                <p>{{theRepo.description}}</p>
+                <a href="{{theRepo.html_url}}"><p>View project on GitHub</p></a>
             </div>
-        </div>
-    </div>-->
+       
+    </div>
 </div>
