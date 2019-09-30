@@ -1,5 +1,5 @@
 <div>
-    <app-gitsearch-form (emitUser)="myName($event)"></app-gitsearch-form>
+    <app-git-search-form (emitUser)="myName($event)"></app-git-search-form>
     <div *ngFor='let theUser of theUsers'>
         <p>Name: {{theUser.name}}<br>GitHub name: {{theUser.login}}</p>
         <img src="{{theUser.avatar_url}}" alt="">
