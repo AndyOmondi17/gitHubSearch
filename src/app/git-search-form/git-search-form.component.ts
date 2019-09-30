@@ -7,12 +7,12 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 })
 export class GitSearchFormComponent implements OnInit {
 
-  @Output () emituserName = new EventEmitter<any>()
+  @Output () emitUsers = new EventEmitter<any>()
 
   userName:string;
 
   user(){
-     this.emituserName.emit(this.userName);
+     this.emitUsers.emit(this.userName);
   }
 
   constructor() { }

@@ -21,19 +21,19 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
     this.myName("AndyOmondi17");
   }
-  myName(nameuser){
-    this.http.userSearch(nameuser).then(
+  myName(userName){
+    this.http.userSearch(userName).then(
       (success)=>{
         this.theUsers=this.http.userProfile;
         console.log(this.theUsers)
   }, 
-  
+
   (error)=>{
     console.log(error)
   });
-  this.http.myRepo(nameuser).then(
+  this.http.myRepo(userName).then(
     (success)=>{
-      this.theRepositories =this.http.userRepository;  
+      this.theRepositories = this.http.userRepository;  
       console.log(this.theRepositories);
     },
     (error)=>{

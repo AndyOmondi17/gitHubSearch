@@ -16,7 +16,7 @@ export class HttpServiceService {
   token = '?access_token=77994758a61466e29a7b88dc0afb4660d64a3efb';
 
   constructor(private http:HttpClient) { }
-  userSearch(nameuser:string){
+  userSearch(userName:string){
     interface data {
       name:string;
       avatar_url:string;
@@ -28,7 +28,7 @@ export class HttpServiceService {
     }
     let promise =  new Promise ((resolve, reject)=>{
       this.userProfile = [];
-      this.http.get<data>(this.url+nameuser+this.token).toPromise().then(
+      this.http.get<data>(this.url+userName+this.token).toPromise().then(
         (result)=>{
           console.log(result);
           this.userProfile.push(result);
@@ -40,7 +40,7 @@ export class HttpServiceService {
     })
     return promise;
   }
-  myRepo(nameuser:string){
+  myRepo(userName:string){
     interface repoData {
       name: string;
       html_url: string;
@@ -49,7 +49,7 @@ export class HttpServiceService {
     }
     let promise = new Promise ((resolve,reject)=>{
       this.userRepository = [];
-      this.http.get<repoData>(this.url+nameuser+"/repos?"+this.token).toPromise().then(
+      this.http.get<repoData>(this.url+userName+"/repos?"+this.token).toPromise().then(
         (result)=>{
           this.userRepository.push(result);
           resolve();

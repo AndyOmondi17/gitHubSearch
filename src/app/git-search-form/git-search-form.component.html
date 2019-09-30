@@ -1,7 +1,11 @@
 <div class="container-fluid">
-    <input type="text" class="form-control" [(ngModel)]="userName" name="userName" id="">
-    <br>
-    <button type="submit" class="btn btn-danger">Search</button>
+    <form class="form-inline" >
+            <input type="text" class="form-control" [(ngModel)]="userName" name="userName" id="">
+            <br>
+            <button type="submit" class="btn btn-danger" (click)="user()">Search</button>
+
+    </form>
+    
 
 
 </div>
